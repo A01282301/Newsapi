@@ -1,0 +1,1 @@
+exports.API_TOKEN = process.env.API_TOKEN || '70f9810e1061463389c8a576521884b6';
