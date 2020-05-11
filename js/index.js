@@ -14,9 +14,13 @@ function DisplayResults(responseJSON){
 }
 
 function fetchNews(searchterm){
-    let url = `https://newsapi.org/v2/top-headlines?apiKey=${APIKEY}&q=${searchterm}`;
+    let url = `https://newsapi.org/v2/top-headlines?q=${searchterm}`;
     let settings = {
-        method : 'GET'
+        method : 'GET',
+
+        headers : {
+            "X-Api-Key" : APIKEY
+        }
     }
 
     fetch (url, settings).then(
