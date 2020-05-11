@@ -17,9 +17,8 @@ function fetchNews(searchterm){
     let url = `https://newsapi.org/v2/top-headlines?q=${searchterm}`;
     let settings = {
         method : 'GET',
-
         headers : {
-            "X-Api-Key" : APIKEY
+            "Authorization" : `Bearer ${APIKEY}`
         }
     }
 
